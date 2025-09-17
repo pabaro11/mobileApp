@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 제목 -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏋️‍♂️ 헬스 루틴 도우미"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <!-- 설명 -->
+        <TextView
+            android:id="@+id/subTitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="오늘 운동 가능한 시간을 입력하고, 원하는 부위를 선택하세요."
+            android:textSize="14sp"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:paddingBottom="16dp"
+            android:ellipsize="none"
+            android:scrollHorizontally="false"/>
+
+        <!-- 시간 입력 -->
+        <EditText
+            android:id="@+id/timeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="운동 시간 (분)"
+            android:inputType="number"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 부위 선택 카드 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- 제목 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="운동 부위 선택"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"/>
+
+            <!-- 구분선 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- 부위 선택 Spinner -->
+            <Spinner
+                android:id="@+id/bodyPartSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <!-- 루틴 추천 버튼 -->
+        <Button
+            android:id="@+id/recommendBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="루틴 추천 받기"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#FF9800"
+            android:textColor="#FFFFFF"/>
+
+        <!-- 운동 완료 버튼 -->
+        <Button
+            android:id="@+id/completeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="운동 완료"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 추천 루틴 결과 -->
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="24dp"
+            android:scrollbars="vertical"
+            android:scrollHorizontally="false"
+            android:lineSpacingExtra="4dp"
+            android:clipToPadding="false"
+            android:elevation="4dp"
+            android:backgroundTint="#FFFFFF"
+            android:gravity="start"/>
+
+    </LinearLayout>
+</ScrollView>
+
